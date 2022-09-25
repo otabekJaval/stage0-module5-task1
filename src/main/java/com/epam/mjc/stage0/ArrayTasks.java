@@ -1,8 +1,6 @@
 package com.epam.mjc.stage0;
 
 
-
-
 /**
  * Here are the tasks for working with the arrays.
  * <p>
@@ -107,24 +105,26 @@ public class ArrayTasks {
      * arr = [-1, -2, -3]   -> []
      * arr = [1, 2]         -> [1, 2]
      */
-    public int[] getOnlyPositiveNumbers(int[] arr) {
+    public static int[] getOnlyPositiveNumbers(int[] arr) {
+
         int c = 0;
 
         for (int i : arr) {
-            if (i < 0)
+            if (i > 0)
                 c++;
         }
 
         int[] res = new int[c];
 
         c = 0;
-        for (int i : arr) {
-            if (i > -1) {
-                res[c] = i;
-            }
-            c++;
 
+        for (int i : arr) {
+            if (i > 0) {
+                res[c] = i;
+                c++;
+            }
         }
+
         return res;
     }
 
